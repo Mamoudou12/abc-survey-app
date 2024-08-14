@@ -13,7 +13,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Instalation
 1. Cloner le dépot :
-git clone https://github.com/votre-utilisateur/abc-survey-app.git
+git clone https://github.com/Mamoudou12/abc-survey-app.git
 cd abc-survey-app
 
 2. Installer les dépendances :

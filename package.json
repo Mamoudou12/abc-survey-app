@@ -1,12 +1,18 @@
 {
   "name": "survey-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Survey App est une application JavaScript simple permettant de gérer les fiches d'enquête de satisfaction des clients. L'application utilise une base de données MongoDB pour stocker les données et permet d'effectuer des opérations CRUD (Create, Read, Update, Delete) sur ces fiches.",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "mongod": "^2.0.0",
+    "mongodb": "^6.8.0",
+    "readline-sync": "^1.4.10"
+  }
 }

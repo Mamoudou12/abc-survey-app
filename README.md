@@ -30,33 +30,64 @@ Pour exécuter l'application, utilisez la commande suivante :
 ## Documentation des Fonctions
 ### surveyModule.js
 - createSurvey :
- permet de créer un nouveau survey.
-- readSurveys :
-Récupère tous les surveys ou ceux correspondant à un filtre spécifique.
-- updateSurvey :
-Permet de mettre à jour un survey existant.
-- deleteSurvey : 
-Supprime un survey en fonction de son ID.
+ - Description : Crée un nouveau survey avec les informations fournies.
+ - Paramètre : { surveyId: 1, title: "Customer Satisfaction", createdBy: "John Doe" }
+ - Retourne : Un objet contenant les détails du survey créé.
+
+- readSurveys(filter = {}):
+ - Description : Récupère tous les surveys ou ceux correspondant à un filtre spécifique.
+ - Retourne : Une liste de surveys correspondant au filtre.
+
+- updateSurvey(surveyId, update) :
+ - Description : Met à jour un survey existant en fonction de l'ID et des données de mise à jour fournies.
+ - Paramètre : { surveyId: 1, updateData: { title: "Employee Satisfaction" } }
+ - Retourne : Un objet contenant les détails mis à jour du survey.
+
+- deleteSurvey(surveyId): : 
+ - Description : Supprime un survey en fonction de son ID.
+ - Paramètre : { surveyId: 1 }
+ - Retourne : Un message confirmant la suppression du survey.
 
 ### questionModule.js
-- createQuestion :
- Crée une nouvelle question pour un survey. 
-- readQuestions :
-Récupère toutes les questions ou celles correspondant à un filtre spécifique.
-- updateQuestion :
-Met à jour une question existante.
-- deleteQuestion : 
-Supprime une question en fonction de son ID.
+- createQuestion(question): 
+  - Description : Crée une nouvelle question pour un   survey spécifique.
+  - Paramètre : { questionId: 101, surveyId: 1, text: "How satisfied are you with our service?" }
+  - Retourne : Un objet contenant les détails de la question créée.
+
+- readQuestions(filter = {}):
+  - Description : Récupère toutes les questions ou celles correspondant à un filtre spécifique.
+  - Retourne : Une liste de questions correspondant au filtre.
+
+  - updateQuestion(questionId, update):
+  - Description : Met à jour une question existante en fonction de l'ID de la question et des données de mise à jour fournies.
+  - Paramètre : { questionId: 101, updateData: { text: "How likely are you to recommend us?" } }
+  - Retourne : Un objet contenant les détails mis à jour de la question.
+
+  - deleteQuestion(questionId): 
+  - Description : Supprime une question en fonction de son ID.
+  - Paramètre : { questionId: 101 }
+  - Retourne : Un message confirmant la suppression de la question.
 
 ### answerModule.js
-- createAnswer :
- Crée une nouvelle réponse pour une question.
-- readAnswers :
-Récupère toutes les réponses ou celles correspondant à un filtre spécifique.
-- updateAnswer :
- Met à jour une réponse existante.
-- deleteAnswer : 
-Supprime une réponse en fonction de son ID.
+- createAnswer(answer): :
+  - Description : Crée une nouvelle réponse pour une question spécifique.
+  - Paramètre : { answerId: 1001, questionId: 101, title: "Very Satisfied" }
+  - Retourne : Un objet contenant les détails de la réponse créée.
+
+- readAnswers(filter = {}): 
+  - Description : Récupère toutes les réponses ou celles correspondant à un filtre spécifique.
+  - Paramètre : { questionId: 101 }
+  - Retourne : Une liste de réponses correspondant au filtre.
+
+- updateAnswer(answerId, update):
+  - Description : Met à jour une réponse existante en fonction de l'ID de la réponse et des données de mise à jour fournies.
+  - Paramètre : { answerId: 1001, updateData: { title: "Somewhat Satisfied" } }
+  - Retourne : Un objet contenant les détails mis à jour de la réponse.
+
+- deleteAnswer(answerId):
+  - Description : Supprime une réponse en fonction de son ID.
+  - Paramètre : { answerId: 1001 }
+  - Retourne : Un message confirmant la suppression de la réponse.
 
 ## Auteur
 Mamoudou Adama Ba

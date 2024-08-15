@@ -49,8 +49,8 @@ const { question } = require('readline-sync');
 
 
 
-// questions
- (async () => {
+// // questions
+  (async () => {
     try {
         // Création d'un nouveau survey
         await createQuestion({
@@ -84,7 +84,7 @@ const { question } = require('readline-sync');
 
     try {
         // Supprimer une question
-        await deleteQuestion(11);
+        await deleteQuestion(12);
     } catch (error) {
         console.error('Erreur lors de la suppression de la  question:', error.message);
     }
@@ -94,8 +94,8 @@ const { question } = require('readline-sync');
 
 
 
-// Answers
-  (async () => {
+// // Answers
+   (async () => {
     try {
         await createAnswer({
             answerId: 11, 
@@ -126,4 +126,4 @@ const { question } = require('readline-sync');
     } catch (error) {
         console.error('Erreur lors de la suppression de la réponse:', error.message);
     }
-})();
+ })();

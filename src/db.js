@@ -13,10 +13,7 @@ async function connectDB() {
     
     try {
         // Créer un nouveau client MongoDB et se connecter
-        const client = new MongoClient(url, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        const client = new MongoClient(url);
 
         await client.connect(); // Connexion au serveur MongoDB
         console.log('Connecté avec succès à MongoDB');

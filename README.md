@@ -28,7 +28,7 @@ Pour exécuter l'application, utilisez la commande suivante :
 - npm start 
 
 ## Documentation des Fonctions
-### surveys.js
+### surveyModule.js
 - createSurvey :
  permet de créer un nouveau survey.
 - readSurveys :
@@ -38,7 +38,7 @@ Permet de mettre à jour un survey existant.
 - deleteSurvey : 
 Supprime un survey en fonction de son ID.
 
-### questions.js
+### questionModule.js
 - createQuestion :
  Crée une nouvelle question pour un survey. 
 - readQuestions :
@@ -48,7 +48,7 @@ Met à jour une question existante.
 - deleteQuestion : 
 Supprime une question en fonction de son ID.
 
-### answers.js
+### answerModule.js
 - createAnswer :
  Crée une nouvelle réponse pour une question.
 - readAnswers :

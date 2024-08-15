@@ -1,6 +1,6 @@
-const { createSurvey, readSurveys, updateSurvey, deleteSurvey } = require('./surveys');
-const { createQuestion, readQuestions, updateQuestion, deleteQuestion } = require('./questions');
-const { createAnswer, readAnswers, updateAnswer, deleteAnswer } = require('./answers');
+const { createSurvey, readSurveys, updateSurvey, deleteSurvey } = require('./surveyModule');
+const { createQuestion, readQuestions, updateQuestion, deleteQuestion } = require('./questionModule');
+const { createAnswer, readAnswers, updateAnswer, deleteAnswer } = require('./answerModule');
 const { question } = require('readline-sync');
 
 // // Exemple d'utilisation

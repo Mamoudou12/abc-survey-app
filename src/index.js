@@ -96,37 +96,34 @@ const { question } = require('readline-sync');
 
 // // Answers
   (async () => {
+    // try {
+    //     await createAnswer({
+    //         answerId: 11, 
+    //         questionId: 2,
+    //         title: "Très satisfait",
+    //     });
+    // } catch (error) {
+    //     console.error('Erreur lors de la création de la réponse: l`\'id existe déja');
+    // }
+
+    // try {
+    //     // Lire toute les réponse
+    //     const answer = await readAnswers();
+    // } catch (error) {
+    //     console.error('Erreur lors de la lecture des réponses:', error.message);
+    // }
+
+    // try {
+    //     // Mettre à jour une réponse
+    //     await updateAnswer(30, {title: "abc_corcoporation"});
+    // } catch (error) {
+    //     console.error('Erreur lors de la mise à jour de la réponse:', error.message);
+    // }
+
     try {
-        await createAnswer({
-            answerId: 11, 
-            questionId: 2,
-            title: "Très satisfait",
-        });
+        // Supprimer une réponse
+        await deleteAnswer(10);
     } catch (error) {
-        console.error('Erreur lors de la création de la réponse: l`\'id existe déja');
+        console.error('Erreur lors de la suppression de la réponse:', error.message);
     }
-
-//     // try {
-//     //     // Lire toute les réponse
-//     //     const answer = await readAnswers();
-//     //     console.log('Answers:', answer);
-//     // } catch (error) {
-//     //     console.error('Erreur lors de la lecture des réponses:', error.message);
-//     // }
-
-//     // try {
-//     //     // Mettre à jour une réponse
-//     //     await updateAnswer(11, {title: "fffdd"});
-//     //     console.log('réponse mis à jour avec succès.');
-//     // } catch (error) {
-//     //     console.error('Erreur lors de la mise à jour de la réponse:', error.message);
-//     // }
-
-//     // try {
-//     //     // Supprimer une réponse
-//     //     await deleteAnswer(25);
-//     //     console.log('réponse supprimé avec succès.');
-//     // } catch (error) {
-//     //     console.error('Erreur lors de la suppression de la réponse:', error.message);
-//     // }
 })();

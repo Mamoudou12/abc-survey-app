@@ -13,6 +13,7 @@ async function createSurvey(survey) {
     
     // Si l'ID est unique, insérer le survey
     const result = await db.collection('surveys').insertOne(survey);
+    console.log('Survey créé avec succès.');
     return result;
 }
 
@@ -21,6 +22,7 @@ async function createSurvey(survey) {
 async function readSurveys(filter = {}) {
     const db = await connectDB();
     const surveys = await db.collection('surveys').find(filter).toArray();
+    console.log('Surveys:', surveys);
     return surveys;
 }
 
@@ -31,6 +33,7 @@ async function updateSurvey(surveyId, update) {
     if (result.matchedCount === 0) {
         throw new Error(`La mise à jour a échoué pour l'ID ${surveyId}.`);
     }
+    console.log('Survey mis à jour avec succès.');
     return result;
 }
 
@@ -44,6 +47,7 @@ async function deleteSurvey(surveyId) {
          throw new Error(`Aucun survey trouvé avec l'ID ${surveyId}. La suppression n'a pas été effectuée.`);
      }
     const result = await db.collection('surveys').deleteOne({ surveyId: surveyId });
+    console.log('Survey supprimé avec succès.');
     return result;
 }
 

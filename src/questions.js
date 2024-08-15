@@ -9,6 +9,7 @@ async function createQuestion(question) {
         throw new Error(`Un survey avec l'ID ${question.questionId} existe déjà. Veuillez choisir un ID inexistant.`);
     }
     const result = await db.collection('questions').insertOne(question);
+    console.log('Question créé avec succès.');
     return result;
 }
 
@@ -16,6 +17,7 @@ async function createQuestion(question) {
 async function readQuestions(filter = {}) {
     const db = await connectDB();
     const questions = await db.collection('questions').find(filter).toArray();
+    console.log('questions:', questions);
     return questions;
 }
 
@@ -26,6 +28,7 @@ async function updateQuestion(questionId, update) {
     if (result.matchedCount === 0) {
         throw new Error(`La mise à jour a échoué pour l'ID ${questionId}.`);
     }
+    console.log('Question mis à jour avec succès.');
     return result;
 }
 
@@ -37,6 +40,7 @@ async function deleteQuestion(questionId) {
         throw new Error(`Aucune question trouvée avec l'ID ${questionId}. La suppression n'a pas été effectuée.`);
     }
     const result = await db.collection('questions').deleteOne({ questionId: questionId });
+    console.log('Question supprimé avec succès.');
     return result;
 }
 

@@ -5,6 +5,7 @@ const connectDB = require('./db.js');
 async function createAnswer(answer) {
     const db = await connectDB();
     const result = await db.collection('answers').insertOne(answer);
+    console.log('Question répondu avec succès.');
     return result;
 }
 

@@ -2,7 +2,7 @@
 const { MongoClient } = require('mongodb');
 
 const url = 'mongodb://localhost:27017'; // URL de connexion à MongoDB
-const dbName = 'abc_corporation'; // Nom de votre base de données
+const dbName = 'survey_app'; // Nom de votre base de données
 
 let db = null;
 

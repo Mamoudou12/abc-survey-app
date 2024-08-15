@@ -30,23 +30,23 @@ Pour exécuter l'application, utilisez la commande suivante :
 ## Documentation des Fonctions
 ### surveyModule.js
 - createSurvey :
- - Description : Crée un nouveau survey avec les informations fournies.
- - Paramètre : { surveyId: 1, title: "Customer Satisfaction", createdBy: "John Doe" }
- - Retourne : Un objet contenant les détails du survey créé.
+  - Description : Crée un nouveau survey avec les informations fournies.
+  - Paramètre : { surveyId: 1, title: "Customer Satisfaction", createdBy: "John Doe" }
+  - Retourne : Un objet contenant les détails du survey créé.
 
 - readSurveys(filter = {}):
- - Description : Récupère tous les surveys ou ceux correspondant à un filtre spécifique.
- - Retourne : Une liste de surveys correspondant au filtre.
+  - Description : Récupère tous les surveys ou ceux correspondant à un filtre spécifique.
+  - Retourne : Une liste de surveys correspondant au filtre.
 
 - updateSurvey(surveyId, update) :
- - Description : Met à jour un survey existant en fonction de l'ID et des données de mise à jour fournies.
- - Paramètre : { surveyId: 1, updateData: { title: "Employee Satisfaction" } }
- - Retourne : Un objet contenant les détails mis à jour du survey.
+  - Description : Met à jour un survey existant en fonction de l'ID et des données de mise à jour fournies.
+  - Paramètre : { surveyId: 1, updateData: { title: "Employee Satisfaction" } }
+  - Retourne : Un objet contenant les détails mis à jour du survey.
 
 - deleteSurvey(surveyId): : 
- - Description : Supprime un survey en fonction de son ID.
- - Paramètre : { surveyId: 1 }
- - Retourne : Un message confirmant la suppression du survey.
+  - Description : Supprime un survey en fonction de son ID.
+  - Paramètre : { surveyId: 1 }
+  - Retourne : Un message confirmant la suppression du survey.
 
 ### questionModule.js
 - createQuestion(question): 
@@ -58,12 +58,12 @@ Pour exécuter l'application, utilisez la commande suivante :
   - Description : Récupère toutes les questions ou celles correspondant à un filtre spécifique.
   - Retourne : Une liste de questions correspondant au filtre.
 
-  - updateQuestion(questionId, update):
+- updateQuestion(questionId, update):
   - Description : Met à jour une question existante en fonction de l'ID de la question et des données de mise à jour fournies.
   - Paramètre : { questionId: 101, updateData: { text: "How likely are you to recommend us?" } }
   - Retourne : Un objet contenant les détails mis à jour de la question.
 
-  - deleteQuestion(questionId): 
+- deleteQuestion(questionId): 
   - Description : Supprime une question en fonction de son ID.
   - Paramètre : { questionId: 101 }
   - Retourne : Un message confirmant la suppression de la question.

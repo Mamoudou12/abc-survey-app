@@ -32,6 +32,7 @@ async function createAnswer(answer) {
 async function readAnswers(filter = {}) {
     const db = await connectDB();
     const answers = await db.collection('answers').find(filter).toArray();
+    console.log('Answers:', answers);
     return answers;
 }
 

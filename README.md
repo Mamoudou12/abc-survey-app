@@ -13,11 +13,11 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Instalation
 1. Cloner le dépot :
-git clone https://github.com/Mamoudou12/abc-survey-app.git
+`` git clone https://github.com/Mamoudou12/abc-survey-app.git``
 cd abc-survey-app
 
 2. Installer les dépendances :
-npm install
+`` npm install ``
 
 3. Configurer la base de donné
 - Créez une base de données MongoDB.
@@ -25,7 +25,7 @@ npm install
 
 ## Démarrage
 Pour exécuter l'application, utilisez la commande suivante :
-- npm start 
+`` npm start `` 
 
 ## Documentation des Fonctions
 ### surveyModule.js

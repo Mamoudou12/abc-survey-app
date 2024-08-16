@@ -4,9 +4,9 @@ const { createAnswer, readAnswers, updateAnswer, deleteAnswer } = require('./ans
 
 async function main() {
      try {
-    //     // Surveys
+        // Surveys
         await createSurvey({
-            surveyId: 12,
+            surveyId: 13,
             name: "Oumar",
             description: "Enquête à Kiffa",
             createdAt: new Date(),
@@ -16,12 +16,11 @@ async function main() {
             }
         });
 
-        const surveys = await readSurveys();
-        console.log('Surveys:', surveys);
+        await readSurveys();
 
-        await updateSurvey(12, { name: "Enquête mise à jour" });
+        await updateSurvey(13, { name: "Enquête mise à jour" });
 
-        await deleteSurvey(12);
+        await deleteSurvey(13);
 
         // Questions
         await createQuestion({
@@ -36,8 +35,7 @@ async function main() {
             }
         });
 
-        const questions = await readQuestions();
-        console.log('Questions:', questions);
+        await readQuestions();
 
         await updateQuestion(11, { type: "Brief" });
 
@@ -50,15 +48,14 @@ async function main() {
             title: "Très satisfait",
         });
 
-        const answers = await readAnswers();
-        console.log('Answers:', answers);
+        await readAnswers();
 
         await updateAnswer(11, { title: "abc_corporation" });
-
+        
         await deleteAnswer(11);
 
     } catch (error) {
-        console.error('Une erreur est survenue:', error.message);
+        console.error(error.message);
     }
 }
 

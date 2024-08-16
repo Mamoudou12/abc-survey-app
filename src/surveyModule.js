@@ -22,7 +22,6 @@ async function createSurvey(survey) {
 async function readSurveys(filter = {}) {
     const db = await connectDB();
     const surveys = await db.collection('surveys').find(filter).toArray();
-    console.log('Surveys:', surveys);
     return surveys;
 }
 

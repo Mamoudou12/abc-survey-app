@@ -17,7 +17,6 @@ async function createQuestion(question) {
 async function readQuestions(filter = {}) {
     const db = await connectDB();
     const questions = await db.collection('questions').find(filter).toArray();
-    console.log('questions:', questions);
     return questions;
 }
 

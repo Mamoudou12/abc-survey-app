@@ -31,65 +31,96 @@ Pour exécuter l'application, utilisez la commande suivante :
 ### surveyModule.js
 - createSurvey :
   - Description : Crée un nouveau survey avec les informations fournies.
-  - Paramètre : { surveyId: 1, title: "Customer Satisfaction", createdBy: "John Doe" }
+  - Paramètre : (
+    - surveyId (int): Identifiant unique du survey. 
+    - title (string) Titre du survey. 
+    - createdBy (string) Nom de la personne ayant créé le survey.
+  ) 
   - Retourne : Un objet contenant les détails du survey créé.
 
-- readSurveys(filter = {}):
+- readSurveys:
   - Description : Récupère tous les surveys ou ceux correspondant à un filtre spécifique.
+  - Paramètre:
+    - filter (object, optionnel) : Critères pour filtrer les surveys. 
+
   - Retourne : Une liste de surveys correspondant au filtre.
 
-- updateSurvey(surveyId, update) :
+- updateSurvey:
   - Description : Met à jour un survey existant en fonction de l'ID et des données de mise à jour fournies.
-  - Paramètre : { surveyId: 1, updateData: { title: "Employee Satisfaction" } }
+  - Paramètre : (
+    - surveyId (int) Identifiant unique du survey à mettre à jour.
+    - update (object): Données de mise à jour, par exemple { title: "Employee Satisfaction" }.)
   - Retourne : Un objet contenant les détails mis à jour du survey.
 
-- deleteSurvey(surveyId): : 
+- deleteSurvey: 
   - Description : Supprime un survey en fonction de son ID.
-  - Paramètre : { surveyId: 1 }
+  - Paramètre :  
+    - surveyId (int) 
   - Retourne : Un message confirmant la suppression du survey.
 
 ### questionModule.js
-- createQuestion(question): 
+- createQuestion: 
   - Description : Crée une nouvelle question pour un   survey spécifique.
-  - Paramètre : { questionId: 101, surveyId: 1, text: "How satisfied are you with our service?" }
+  - Paramètre : (
+    - questionId (int): Identifiant unique de la question.
+    - surveyId (int): Identifiant unique du survey auquel la question appartient.
+    - text (string): Texte de la question.
+  ) 
   - Retourne : Un objet contenant les détails de la question créée.
 
-- readQuestions(filter = {}):
+- readQuestions:
   - Description : Récupère toutes les questions ou celles correspondant à un filtre spécifique.
+  - Paramètre:
+    - filter (object, optionnel): Critères pour filtrer les questions.
   - Retourne : Une liste de questions correspondant au filtre.
 
-- updateQuestion(questionId, update):
+- updateQuestion:
   - Description : Met à jour une question existante en fonction de l'ID de la question et des données de mise à jour fournies.
-  - Paramètre : { questionId: 101, updateData: { text: "How likely are you to recommend us?" } }
+  - Paramètre: (
+    - questionId (int): Identifiant unique de la question à mettre à jour.
+    - update (objet):  Données de mise à jour, par exemple { text: "How likely are you to recommend us?" }.)
+   
   - Retourne : Un objet contenant les détails mis à jour de la question.
 
-- deleteQuestion(questionId): 
+- deleteQuestion: 
   - Description : Supprime une question en fonction de son ID.
-  - Paramètre : { questionId: 101 }
+  - Paramètre :
+    - questionId (int): Identifiant unique de la question à supprimer.
   - Retourne : Un message confirmant la suppression de la question.
 
 ### answerModule.js
 - createAnswer(answer): :
   - Description : Crée une nouvelle réponse pour une question spécifique.
-  - Paramètre : { answerId: 1001, questionId: 101, title: "Very Satisfied" }
+  - Paramètre : (
+    - answerId (int): Identifiant unique de la réponse.
+    - questionId (int): Identifiant unique de la question à laquelle la réponse est associée.
+    - title (string): Texte de la réponse.
+  )  
   - Retourne : Un objet contenant les détails de la réponse créée.
 
 - readAnswers(filter = {}): 
   - Description : Récupère toutes les réponses ou celles correspondant à un filtre spécifique.
-  - Paramètre : { questionId: 101 }
+  - Paramètre : 
+    - filter (object, optionnel): Critères pour filtrer les réponses.
   - Retourne : Une liste de réponses correspondant au filtre.
 
-- updateAnswer(answerId, update):
+- updateAnswer:
   - Description : Met à jour une réponse existante en fonction de l'ID de la réponse et des données de mise à jour fournies.
-  - Paramètre : { answerId: 1001, updateData: { title: "Somewhat Satisfied" } }
+  - Paramètre : (
+    - answerId (int):  Identifiant unique de la réponse à mettre à jour.
+    - update (object):  Données de mise à jour, par exemple { title: "Somewhat Satisfied" }.) 
   - Retourne : Un objet contenant les détails mis à jour de la réponse.
 
 - deleteAnswer(answerId):
   - Description : Supprime une réponse en fonction de son ID.
-  - Paramètre : { answerId: 1001 }
+  - Paramètre : (
+    - answerId (int): Identifiant unique de la réponse à supprimer.
+  )
   - Retourne : Un message confirmant la suppression de la réponse.
 
 ## Auteur
-Mamoudou Adama Ba
+Mamoudou Adama Ba [Lien de mon profil](https://github.com/Mamoudou12)
+
+
 
 

@@ -24,10 +24,7 @@ async function createAnswer(answer) {
         // Gestion de l'erreur
         console.error('Erreur lors de la création de la réponse:', error.message);
         throw error; // Rejeter l'erreur pour que l'appelant puisse également la gérer
-    } finally {
-        // Fermer la connexion à la base de données
-        await db.close();
-    }
+    } 
 }
 
 
@@ -35,7 +32,6 @@ async function createAnswer(answer) {
 async function readAnswers(filter = {}) {
     const db = await connectDB();
     const answers = await db.collection('answers').find(filter).toArray();
-    console.log('Answers:', answers);
     return answers;
 }
 

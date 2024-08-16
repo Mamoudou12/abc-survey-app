@@ -1,16 +1,12 @@
 const { createSurvey, readSurveys, updateSurvey, deleteSurvey } = require('./surveyModule');
 const { createQuestion, readQuestions, updateQuestion, deleteQuestion } = require('./questionModule');
 const { createAnswer, readAnswers, updateAnswer, deleteAnswer } = require('./answerModule');
-const { question } = require('readline-sync');
 
-// // Exemple d'utilisation
-
-// // surveys
- (async () => {
-    try {
-        // Création d'un nouveau survey
+async function main() {
+     try {
+    //     // Surveys
         await createSurvey({
-            surveyId: 12, // Assurez-vous que cet ID est unique
+            surveyId: 12,
             name: "Oumar",
             description: "Enquête à Kiffa",
             createdAt: new Date(),
@@ -20,110 +16,50 @@ const { question } = require('readline-sync');
             }
         });
 
-    } catch (error) {
-        console.error('Erreur lors de la création du survey:', error.message);
-    }
-
-    try {
-        // Lire tous les surveys
         const surveys = await readSurveys();
-    } catch (error) {
-        console.error('Erreur lors de la lecture des surveys:', error.message);
-    }
+        console.log('Surveys:', surveys);
 
-    try {
-        // Mettre à jour un survey
-        await updateSurvey(121, { name: "Enquête mise à jour" });
-    } catch (error) {
-        console.error('Erreur lors de la mise à jour du survey:', error.message);
-    }
+        await updateSurvey(12, { name: "Enquête mise à jour" });
 
-    try {
-        // Supprimer un survey
-        await deleteSurvey(33);
-    } catch (error) {
-        console.error('Erreur lors de la suppression du survey:', error.message);
-    }
- })();
+        await deleteSurvey(12);
 
-
-
-
-// // questions
-  (async () => {
-    try {
-        // Création d'un nouveau survey
+        // Questions
         await createQuestion({
-            questionId: 11, 
-            surveyId: 3,
+            questionId: 11,
+            surveyId: 12,
             title: "Enquête à Kiffa",
-            type: "f,vfvjv",
+            type: "multiple_choice",
             options: {
                 minValue: 4,
-                employeeRole: 6,
+                maxValue: 6,
                 step: 5
             }
         });
-    } catch (error) {
-        console.error('Erreur lors de la création de la question: l`\'id existe déja');
-    }
 
-    try {
-        // Lire tous les questions
         const questions = await readQuestions();
-    } catch (error) {
-        console.error('Erreur lors de la lecture des surveys:', error.message);
-    }
+        console.log('Questions:', questions);
 
-    try {
-        // Mettre à jour une question
         await updateQuestion(11, { type: "Brief" });
-    } catch (error) {
-        console.error('Erreur lors de la mise à jour du question:', error.message);
-    }
 
-    try {
-        // Supprimer une question
-        await deleteQuestion(12);
-    } catch (error) {
-        console.error('Erreur lors de la suppression de la  question:', error.message);
-    }
-})();
+        await deleteQuestion(11);
 
-
-
-
-
-// // Answers
-   (async () => {
-    try {
+        // Answers
         await createAnswer({
-            answerId: 11, 
-            questionId: 2,
+            answerId: 11,
+            questionId: 11,
             title: "Très satisfait",
         });
-    } catch (error) {
-        console.error('Erreur lors de la création de la réponse: l`\'id existe déja');
-    }
 
-    try {
-        // Lire toute les réponse
-        const answer = await readAnswers();
-    } catch (error) {
-        console.error('Erreur lors de la lecture des réponses:', error.message);
-    }
+        const answers = await readAnswers();
+        console.log('Answers:', answers);
 
-    try {
-        // Mettre à jour une réponse
-        await updateAnswer(30, {title: "abc_corcoporation"});
-    } catch (error) {
-        console.error('Erreur lors de la mise à jour de la réponse:', error.message);
-    }
+        await updateAnswer(11, { title: "abc_corporation" });
 
-    try {
-        // Supprimer une réponse
-        await deleteAnswer(10);
+        await deleteAnswer(11);
+
     } catch (error) {
-        console.error('Erreur lors de la suppression de la réponse:', error.message);
+        console.error('Une erreur est survenue:', error.message);
     }
- })();
+}
+
+main();

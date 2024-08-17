@@ -34,11 +34,9 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Démarrage
 ## Démarrage
-Pour démarrer l'application, exécutez la commande suivante :
-
-    ```bash
-    npm start
-    ```
+Pour exécuter l'application, utilisez la commande suivante :
+`` npm start `` 
+ 
 
 ## Documentation des Fonctions
 ### surveyModule.js

@@ -14,7 +14,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 ## Instalation
 1. **Clonez le repository :**
     ```bash
-    git clone <https://github.com/Mamoudou12/abc-survey-app.git>
+    git clone https://github.com/Mamoudou12/abc-survey-app.git
     ```
 2. **Accédez au dossier du projet :**
 

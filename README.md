@@ -12,14 +12,23 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 - [MongoDB](https://www.mongodb.com/try/download/community) (version 4.0 ou supérieure)
 
 ## Instalation
-1. Cloner le dépot :
-`` git clone https://github.com/Mamoudou12/abc-survey-app.git``
-cd abc-survey-app
+1. **Clonez le repository :**
+    ```bash
+    git clone <https://github.com/Mamoudou12/abc-survey-app.git>
+    ```
+2. **Accédez au dossier du projet :**
 
-2. Installer les dépendances :
-`` npm install ``
+    ```bash
+    cd abc-survey-app
+    ```
 
-3. Configurer la base de donné
+3. **Installez les dépendances :**
+
+    ```bash
+    npm install
+    ```
+
+4. **Configurez la base de données :**
 - Créez une base de données MongoDB.
 - Modifiez le fichier db.js pour inclure votre URL de connexion MongoDB.
 
@@ -44,7 +53,7 @@ Pour exécuter l'application, utilisez la commande suivante :
 - updateSurvey (surveyId, update):
   - Met à jour un survey existant en fonction de l'ID et des données de mise à jour fournies et retourn un objet contenant les détails mis à jour du survey.
     - surveyId (int) Identifiant unique du survey à mettre à jour.
-    - update (object): Données de mise à jour, par exemple { title: "Employee Satisfaction" }.
+    - update (object): Données de mise à jour, par exemple { description: "Enquête visant à évaluer la satisfaction" }.
 
 - deleteSurvey: 
   - Supprime un survey en fonction de son ID et retourn message confirmant la suppression du survey. 
@@ -70,7 +79,7 @@ Pour exécuter l'application, utilisez la commande suivante :
 - updateQuestion (questionId, update) :
   - Met à jour une question existante en fonction de l'ID de la question et des données de mise à jour fournies et retourn un objet contenant les détails mis à jour de la question.
     - questionId (int): Identifiant unique de la question à mettre à jour.
-    - update (objet):  Données de mise à jour, par exemple { text: "How likely are you to recommend us?" }
+    - update (objet):  Données de mise à jour, par exemple { title: "Comment évalueriez-vous notre service ?" }
  
 - deleteQuestion: 
   - Supprime une question en fonction de son ID et retourn un message confirmant la suppression de la question. 
@@ -90,7 +99,7 @@ Pour exécuter l'application, utilisez la commande suivante :
 - updateAnswer (answerId, update):
   - Met à jour une réponse existante en fonction de l'ID de la réponse et des données de mise à jour fournies et retourn un objet contenant les détails mis à jour de la réponse.
     - answerId (int):  Identifiant unique de la réponse à mettre à jour.
-    - update (object):  Données de mise à jour, par exemple { title: "Somewhat Satisfied" }.   
+    - update (object):  Données de mise à jour, par exemple { title: "Rapidité du service" }.   
 
 - deleteAnswer(answerId):
   - Supprime une réponse en fonction de son ID et retourn unmessage confirmant la suppression de la réponse.
